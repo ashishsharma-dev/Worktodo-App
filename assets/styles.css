@@ -143,3 +143,43 @@ input:checked + .text {
   font-weight: 800;
   cursor: pointer;
 }
+
+.copyright{
+  position: absolute;
+  bottom: 5px;
+  font-size: 0.8rem;
+  color: #717171;
+}
+
+.copyrightContent a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Media Queries */
+
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+    .text{
+      width: 185px;
+      margin-left: 5px;
+    }
+}
+
+/* Small screen devices (600px and above) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+  .text{
+    width: 600px;
+    margin-left: 5px;
+  }  
+}
+
+/* Big screen devices (889px and above) */
+/* @media only screen and (min-width: 889px) {...} */
+
+/* Extra big screen devices (1200px and above) */
+/* @media only screen and (min-width: 1200px) {...} */
