@@ -3,31 +3,56 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  overflow-y: hidden;
+  transition: all 0.3s;
+}
+
+#daymode{
+  background-color: #ddd;
+  color: #023047;
+}
+#daymodeInputTask{
+  background-color: #737373;
+  color: #333;
+}
+
+.nightmode-toggler{
+    font-size: 1.8rem;
+  margin: 0 1rem;
+  padding-top: 1rem;
+}
+.nav-section{
+  background-color: #023047;
+/*   padding: 0.5rem; */
+  text-align:right;
+}
+
 .container {
   width: 100%;
-  height: 100vh;
+  height: 100vmax;
   display: flex;
-  justify-content: center;
+/*   justify-content: center; */
   align-items: center;
   flex-direction: column;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #333;
+  background-color: #023047;
 }
 .todoList {
   font-size: 2.5rem;
   letter-spacing: 1.1px;
-  border-bottom: 3px solid;
+  border-bottom: 3px solid #ddd;
   padding-bottom: 5px;
   font-weight: 700;
-  color: #1a1b18;
+  color: #8ecae6;
 }
 .bold {
-  color: #494ca2;
+  color: #ddd;
 }
 .todoListContainer {
   width: 95%;
   max-width: 800px;
-  height: 400px;
+  height: 50vh;
   margin-top: 1rem;
   /* background-color: #c6cbef;
   border: 1px solid; */
@@ -35,16 +60,18 @@
 
 .allTasks {
   font-size: 2rem;
-  color: #1a1b18;
+  color: #ddd;
+  margin-left: 5px;
 }
 .inputBox input {
   width: auto;
   width: -webkit-fill-available;
+  width: -moz-available;
 
   outline: none;
   padding: 0.8rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff;
+/*   background-color: #fff; */
   margin: 5px;
 
   border-radius: 1rem;
@@ -63,9 +90,9 @@
   height: 2.7rem;
   border-radius: 1rem;
   position: absolute;
-  background-color: #494ca2;
+  background-color: #ddd;
   border: none;
-  color: #fff;
+  color: #28282b;
   font-size: 1.5rem;
   right: 10px;
   top: 10px;
@@ -73,6 +100,11 @@
 }
 .taskBox {
   margin: 5px;
+  height: 380px;
+  overflow-y: scroll;
+}
+.taskBox::-webkit-scrollbar{
+  display: none;
 }
 .task {
   font-size: 1.3rem;
@@ -114,7 +146,7 @@ input:checked + .text {
   color: #717171;
   display: inline-block;
   margin-bottom: 10px;
-  margin-left: 3px;
+  margin-left: 7px;
   font-weight: 700;
 }
 
@@ -152,7 +184,7 @@ input:checked + .text {
 }
 
 .copyrightContent a{
-  text-decoration: none;
+/*   text-decoration: none; */
   color: inherit;
 }
 
@@ -165,6 +197,15 @@ input:checked + .text {
       width: 185px;
       margin-left: 5px;
     }
+
+  .taskBox{
+    height: 63%;
+  }
+
+  .todoListContainer{
+    
+    height: 88vh;
+  }
 }
 
 /* Small screen devices (600px and above) */
@@ -175,7 +216,12 @@ input:checked + .text {
   .text{
     width: 600px;
     margin-left: 5px;
-  }  
+  }
+
+  .taskBox{
+    height: 80%;
+  }
+  
 }
 
 /* Big screen devices (889px and above) */
